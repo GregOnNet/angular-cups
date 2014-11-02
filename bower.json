@@ -1,0 +1,27 @@
+{
+  "name": "angular-cups",
+  "version": "0.0.1",
+  "homepage": "https://github.com/GregOnNet/angular-cups",
+  "authors": [
+    "Gregor Woiwode <gregor.woiwode@gmail.com>"
+  ],
+  "description": "A demo app to get startet with AngularJS. It allows users (aka cuppers) to collect bonus points for each drunken cup of coffee.",
+  "main": "app/app.js",
+  "keywords": [
+    "angularjs",
+    "getting-startet",
+    "tingodb",
+    "restify"
+  ],
+  "license": "apache 2.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.1"
+  }
+}

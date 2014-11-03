@@ -1,6 +1,8 @@
 (function() {
   "use strict";
 
-  angular.module('cups.cupper', []);
+  angular.module('cups.cupper', [
+    'ngRoute'
+  ]);
 
 }());

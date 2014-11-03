@@ -2,7 +2,7 @@
   "use strict";
 
   angular
-    .module('cupper')
+    .module('cups.cupper')
     .run(defineRoutes);
 
   defineRoutes.$inject = ['$routerProvider'];

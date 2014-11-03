@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('cups.cupper', [
-    'ngRoute'
+    'cups.core'
   ]);
 
 }());

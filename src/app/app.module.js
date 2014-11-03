@@ -1,6 +1,8 @@
 (function() {
   "use strict";
 
-  angular.module('cups', []);
+  angular.module('cups', [
+   'cups.cupper'
+  ]);
 
 }());

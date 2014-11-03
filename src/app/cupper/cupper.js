@@ -1,5 +1,5 @@
 (function() {
-  "use strict";
+  'use strict';
 
   angular
     .module('cups.cupper')
@@ -7,7 +7,7 @@
 
   cupper.$inject = [];
 
-  function cupper()){
-    
+  function cupper(){
+
   }
 }());

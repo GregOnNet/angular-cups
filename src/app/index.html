@@ -1,5 +1,5 @@
 <!Doctype html>
-<html>
+<html ng-app="cups">
 
 <head>
   <title>Cups</title>
@@ -8,22 +8,21 @@
 </head>
 
 <body>
-  <div class="row">
-    <div class="col-md-offset-4 col-md-5">
 
-      <div class="well">
-        <div class="form-control-wrapper">
-          <input class="form-control input-lg empty" type="text" placeholder="Filter students...">
-          <span class="material-input"></span>
-        </div>
+  <section id="content">
+    <div ng-view></div>
+  </section>
 
-      </div>
-    </div>
-  </div>
-
-  <!-->AngularJS Modules</!-->
+  <!-- AngularJS Modules -->
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
-</body>
+
+  <!-- Core -->
+  <script src="app.module.js"></script>
+
+  <!-- Cupper -->
+  <script src="cupper/cupper.module.js"></script>
+  <script src="cupper/cupper.route.js"></script>
+  <script src="cupper/cupper.js"></script>
 
 </html>

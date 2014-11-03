@@ -3,11 +3,11 @@
 
   angular
     .module('cups.cupper')
-    .run(defineRoutes);
+    .config(defineRoutes);
 
-  defineRoutes.$inject = ['$routerProvider'];
+  defineRoutes.$inject = ['$routeProvider'];
 
-  function defineRoutes($routerProvider) {
+  function defineRoutes($routeProvider) {
     $routeProvider.
       when('/cupper/:matriculationNumber', {
         templateUrl: 'cupper/cupper.html',

@@ -15,7 +15,8 @@
       })
       .when('/welcome-a-new-cupper', {
         templateUrl: 'cupper/welcome-cupper.html',
-        controller: 'welcome-cupper'
+        controller: 'welcomeCupper',
+        controllerAs: 'cupper'
       });
   }
 }());

@@ -5,6 +5,7 @@
    "globals" : {
     "require"     : true,
     "module"      : true,
+    "exports"     : true‚
     "__dirname"   : true,
     "console"     : true
   }

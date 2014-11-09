@@ -3,11 +3,11 @@
 
   angular
     .module('cups.cupper')
-    .controller('cupper', cupper);
+    .factory('cupper', cupper);
 
-  cupper.$inject = [];
+  cupper.$inject = ['$http'];
 
-  function cupper(){
+  function cupper($http) {
 
   }
 }());

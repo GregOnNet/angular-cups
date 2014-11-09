@@ -1,3 +1,9 @@
 .align-to-list-group-content {
   margin-left: 88px;
 }
+
+.btn-fixed-right-bottom {
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+}

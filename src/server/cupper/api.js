@@ -1,5 +1,7 @@
 'use strict';
 
+var Cupper = require('./model');
+
 var cuppers = [];
 
 exports.get = function(req, res) {
@@ -10,16 +12,9 @@ exports.get = function(req, res) {
 };
 
 exports.post = function(req, res) {
+  var data = req.body || {};
+  var cupper = new Cupper(data.name, data.matriculationNumber);
 
-  if (req.body.cupper) {
-
-    cuppers.push(req.body.cupper);
-    res.status(201).send('Created');
-
-  }
-  else {
-
-    res.status(400).send('There was no cupper defined!');
-
-  }
+  cuppers.push(req.body.cupper);
+  res.status(201).send('Created');
 };

@@ -8,6 +8,7 @@
   welcomeCupper.$inject = [];
 
   function welcomeCupper(){
-
+    var cupper = this;
+    
   }
 }());

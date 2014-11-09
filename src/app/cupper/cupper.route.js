@@ -8,10 +8,14 @@
   defineRoutes.$inject = ['$routeProvider'];
 
   function defineRoutes($routeProvider) {
-    $routeProvider.
-      when('/cupper/:matriculationNumber', {
+    $routeProvider
+      .when('/cupper/:matriculationNumber', {
         templateUrl: 'cupper/cupper.html',
         controller: 'cupper'
+      })
+      .when('/welcome-a-new-cupper', {
+        templateUrl: 'cupper/welcome-cupper.html',
+        controller: 'welcome-cupper'
       });
   }
 }());

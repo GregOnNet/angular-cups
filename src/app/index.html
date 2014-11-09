@@ -4,7 +4,9 @@
 <head>
   <title>Cups</title>
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-  <link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/material.css">
+  <link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/material-wfont.css">
+  <link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/ripples.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -16,6 +18,16 @@
   <!-- AngularJS Modules -->
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
+
+  <!-- Vendor Scripts -->
+  <script src="bower_components/jQuery/dist/jquery.js"></script>
+  <script src="bower_components/bootstrap-material-design/dist/js/ripples.js"></script>
+  <script src="bower_components/bootstrap-material-design/dist/js/material.js"></script>
+  <script>
+    $(document).ready(function() {
+        $.material.init();
+    });
+  </script>
 
   <!-- Core -->
   <script src="core/core.module.js"></script>

@@ -16,7 +16,7 @@
       .when('/welcome-a-new-cupper', {
         templateUrl: 'cupper/welcomeCupper.html',
         controller: 'welcomeCupper',
-        controllerAs: 'cupper'
+        controllerAs: 'welcome'
       });
   }
 }());

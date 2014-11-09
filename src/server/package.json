@@ -1,0 +1,28 @@
+{
+  "name": "angular-cups-backend",
+  "version": "0.0.1",
+  "description": "express backend for angular-cups",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GregOnNet/angular-cups"
+  },
+  "keywords": [
+    "angularjs",
+    "express"
+  ],
+  "author": "Gregor Woiwode",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GregOnNet/angular-cups/issues"
+  },
+  "homepage": "https://github.com/GregOnNet/angular-cups",
+  "dependencies": {
+    "body-parser": "^1.9.2",
+    "express": "^4.10.1",
+    "method-override": "^2.3.0"
+  }
+}

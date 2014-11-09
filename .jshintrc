@@ -1,4 +1,11 @@
 {
   "globalstrict"  : true,
-  "validthis"     : true
+  "validthis"     : true,
+
+   "globals" : {
+    "require"     : true,
+    "module"      : true,
+    "__dirname"   : true,
+    "console"     : true
+  }
 }

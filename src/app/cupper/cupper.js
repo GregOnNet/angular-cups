@@ -5,9 +5,9 @@
     .module('cups.cupper')
     .factory('cupper', cupper);
 
-  cupper.$inject = ['$http'];
+  cupper.$inject = ['$http', 'snackbar'];
 
-  function cupper($http) {
+  function cupper($http, snackbar) {
     var api = '/api/';
 
     return {
@@ -16,6 +16,7 @@
     };
 
     function getAll() {
+
       $http
         .get(api + 'cuppers')
         .then(callSucceeded)
@@ -31,17 +32,21 @@
     }
 
     function create(cupper) {
+
       $http
         .post(api + 'cupper', cupper)
         .then(callSucceeded)
         .catch(callCrashed);
 
-      function callSucceeded(response){
+      function callSucceeded(response) {
+
+        snackbar({ 'content' : response.data });
         return response.data;
       }
 
-      function callCrashed(error){
-        console.log(error);
+      function callCrashed(error) {
+        
+        snackbar({ 'content' : error });
       }
     }
   }

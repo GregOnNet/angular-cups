@@ -4,6 +4,7 @@
   padding:5px;
   border-radius:5px;
   margin-top:15px;
+  margin-bottom:10px;
   position:relative;
 }
 .error-messages.ng-active:after {

@@ -27,6 +27,7 @@
     "bootstrap": "~3.3.0",
     "bootstrap-material-design": "~0.1.5",
     "jQuery": "~2.1.1",
-    "snackbarjs": "~1.0.0"
+    "snackbarjs": "~1.0.0",
+    "angular-messages": "~1.3.2"
   }
 }

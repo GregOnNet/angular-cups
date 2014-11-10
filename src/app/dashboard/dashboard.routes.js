@@ -11,7 +11,8 @@
     $routeProvider
       .when('/', {
         templateUrl: 'dashboard/dashboard.html',
-        controller: 'dashboard'
+        controller: 'dashboard',
+        controllerAs: 'dashboard'
       });
   }
 }());

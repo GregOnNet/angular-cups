@@ -5,9 +5,21 @@
     .module('cups.dashboard')
     .controller('dashboard', dashboard);
 
-  dashboard.$inject = [];
+  dashboard.$inject = ['cupper'];
 
-  function dashboard(){
+  function dashboard(cupper){
+    var dashboard = this;
 
+    dashboard.cuppers = [];
+    dashboard.getAll = getAll;
+
+    getAll();
+
+    function getAll(){
+      return cupper.getAll().then(function(cuppers){
+        dashboard.cuppers = cuppers;
+        return dashboard.cuppers;
+      });
+    }
   }
 }());

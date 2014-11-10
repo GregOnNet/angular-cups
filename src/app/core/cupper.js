@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('cups.cupper')
+    .module('cups.core')
     .factory('cupper', cupper);
 
   cupper.$inject = ['$http', 'snackbar'];
@@ -45,7 +45,7 @@
       }
 
       function callCrashed(error) {
-        
+
         snackbar({ 'content' : error });
       }
     }

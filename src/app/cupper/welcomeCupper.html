@@ -15,13 +15,15 @@
 
       <div class="well">
 
-        <div class="list-group">
-          <div class="list-group-item">
-            <div class="row-picture">
-              <img class="circle" src="http://lorempixel.com/56/56/people/1" alt="icon">
-            </div>
-            <div class="row-content">
-              <form novalidate name="create-cupper-form">
+        <form novalidate name="form">
+
+          <div class="list-group">
+            <div class="list-group-item">
+              <div class="row-picture">
+                <img class="circle" src="http://lorempixel.com/56/56/people/1" alt="icon">
+              </div>
+              <div class="row-content">
+
 
                 <div class="form-group">
                   <input ng-model="welcome.cupper.name" class="form-control floating-label" placeholder="Name" required>
@@ -30,14 +32,19 @@
                   <input ng-model="welcome.cupper.matriculationNumber" class="form-control floating-label" placeholder="Matriculation Number" required>
                 </div>
 
-              </form>
+
+              </div>
             </div>
           </div>
-        </div>
 
-        <button ng-click="welcome.newCupper()" class="btn btn-primary btn-material-brown align-to-list-group-content">
-          Add
-        </button>
+          <button
+            ng-disabled="form.$invalid"
+            ng-click="welcome.newCupper()" class="btn btn-primary btn-material-brown align-to-list-group-content">
+            Add
+          </button>
+
+        </form>
+
       </div>
 
 

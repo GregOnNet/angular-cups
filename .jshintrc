@@ -2,7 +2,7 @@
   "globalstrict"  : true,
   "validthis"     : true,
 
-   "globals" : {
+  "globals" : {
     "require"     : true,
     "module"      : true,
     "exports"     : true‚

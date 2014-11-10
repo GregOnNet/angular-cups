@@ -7,3 +7,8 @@
   right: 25px;
   bottom: 25px;
 }
+
+.has-bottom-separator {
+  border-bottom: 1px solid #E5E5E5;
+  margin-bottom: 8px;
+}

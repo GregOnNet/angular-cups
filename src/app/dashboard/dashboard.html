@@ -7,15 +7,14 @@
       <div class="well">
 
         <div class="form-group">
-          <div class="form-control-wrapper">
-            <input class="form-control input-lg" id="focusedInput" type="text">
-            <div class="floating-label">Filter cuppers</div>
-            <span class="material-input"></span>
-          </div>
+          <input ng-model="cuppersQuery"
+                 class="form-control input-lg"
+                 placeholder="Filter cuppers...">
         </div>
 
         <div class="list-group">
-          <div ng-repeat="cupper in dashboard.cuppers" class="list-group-item">
+          <div ng-repeat="cupper in dashboard.cuppers | filter:cuppersQuery" 
+               class="list-group-item">
 
             <div class="row-picture">
               <img class="circle" src="http://lorempixel.com/56/56/people/1" alt="icon">

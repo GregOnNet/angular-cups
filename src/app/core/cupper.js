@@ -17,23 +17,25 @@
 
     function getAll() {
 
-      $http
+      return $http
         .get(api + 'cuppers')
         .then(callSucceeded)
         .catch(callCrashed);
 
       function callSucceeded(response){
+        
         return response.data;
       }
 
       function callCrashed(error){
-        console.log(error);
+
+        snackbar({ 'content' : error });
       }
     }
 
     function create(cupper) {
 
-      $http
+      return $http
         .post(api + 'cupper', cupper)
         .then(callSucceeded)
         .catch(callCrashed);

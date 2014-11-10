@@ -14,7 +14,7 @@
     welcome.newCupper = newCupper;
 
     function newCupper(){
-      cupper.create(welcome.cupper);
+      return cupper.create(welcome.cupper);
     };
   }
 }());

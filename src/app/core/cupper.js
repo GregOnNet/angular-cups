@@ -88,5 +88,23 @@
         snackbar({ 'content' : error.data });
       }
     }
+
+    function getsAFreeCup(cupper) {
+
+      return $http
+        .put(api + 'cupper/getsAFreeCup', cupper)
+        .then(callSucceeded)
+        .catch(callCrashed);
+
+      function callSucceeded(response) {
+
+        return response.data;
+      }
+
+      function callCrashed(error) {
+
+        snackbar({ 'content' : error.data });
+      }
+    }
   }
 }());

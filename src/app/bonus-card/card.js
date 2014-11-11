@@ -15,6 +15,7 @@
     card.cupper = {};
     card.getCupper = getCupper;
     card.stamp = stamp;
+    card.spendAFreeCup = spendAFreeCup;
 
     getCupper();
 
@@ -32,6 +33,16 @@
     function stamp(){
       return cupper
         .drinksACup(card.cupper)
+        .then(function(cupper){
+
+          card.cupper = cupper;
+          return card.cupper;
+        });
+    }
+
+    function spendAFreeCup(){
+      return cupper
+        .getsAFreeCup(card.cupper)
         .then(function(cupper){
 
           card.cupper = cupper;

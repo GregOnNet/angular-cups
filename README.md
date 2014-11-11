@@ -1,6 +1,6 @@
 # angular-cups
 
-A demo app to get startet with AngularJS. It allows users (aka cuppers) to collect bonus points for each drunken cup of coffee.
+A demo app to get started with AngularJS. It allows users (aka cuppers) to collect bonus points for each drunken cup of coffee.
 
 ## Getting started
 

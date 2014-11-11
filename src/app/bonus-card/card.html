@@ -6,20 +6,28 @@
 
       <div class="well">
 
-        <cups-cupper
-          identity="card.cupper">
-        </cups-cupper>
-        {{ card.cupper.drunkenCups }}
+        <div class="row">
+          <div ng-repeat="n in card.cupper.drunkenCups | toCollection track by $index"
+               class="col-md-3">
+            <span class="icon-cup-full"></span>
+          </div>
+          <div ng-repeat="n in (10-card.cupper.drunkenCups) | toCollection track by $index"
+               class="col-md-3">
+            <span class="icon-cup-empty"></span>
+          </div>
+        </div>
 
+        <hr>
+        
         <button
           ng-if="card.cupper.getsAFreeCup === false"
-          ng-click="card.stamp()" class="btn btn-primary btn-material-brown align-to-list-group-content">
+          ng-click="card.stamp()" class="btn btn-primary btn-material-brown btn-block">
           Stamp
         </button>
 
         <button
           ng-if="card.cupper.getsAFreeCup"
-          ng-click="card.spendAFreeCup()" class="btn btn-success align-to-list-group-content">
+          ng-click="card.spendAFreeCup()" class="btn btn-success btn-block">
           Spend a free cup
         </button>
 

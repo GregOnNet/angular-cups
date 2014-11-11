@@ -10,7 +10,8 @@
       restrict    : 'E',
       templateUrl : 'core/cups-cupper.html',
       scope       : {
-        cupper                : '=identity'
+
+        cupper : '=identity'
       }
     }
   }

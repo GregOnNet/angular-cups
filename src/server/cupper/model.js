@@ -1,7 +1,8 @@
 'use strict';
 
-module.exports = function(name, matriculationNumber, drunkenCups){
+module.exports = function(name, matriculationNumber){
 	this.name = name || 'anonymous';
 	this.matriculationNumber = matriculationNumber || 'None';
-	this.drunkenCups = drunkenCups || 0;
+	this.drunkenCups = 0;
+	this.getsAFreeCup = false;
 };

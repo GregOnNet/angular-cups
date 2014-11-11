@@ -14,3 +14,6 @@ Run the following commands from the angular-cups root directory to install all n
 Run `server.js` to start the web server @ [http://localhost:8080]().
 
 1. `node src/server/server.js`
+
+## License
+[Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0)

@@ -22,7 +22,8 @@
 }
 
 .list-group .list-group-item:hover,
-.list-group .list-group-item:hover .list-group-item-heading {
+.list-group .list-group-item:hover .list-group-item-heading,
+.list-group .list-group-item:hover .row-content {
   color: #A0624E;
   cursor: pointer;
 }
@@ -51,6 +52,7 @@
 }
 
 .list-group-item .row-content {
+  color: #777777;
   display: inline-block;
   width: calc(100% - 92px);
   min-height: 66px;

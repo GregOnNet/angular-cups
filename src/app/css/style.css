@@ -12,3 +12,50 @@
   border-bottom: 1px solid #E5E5E5;
   margin-bottom: 8px;
 }
+
+.list-group-item {
+  border: 0;
+}
+
+.list-group-item {
+  background-color: transparent;
+  overflow: hidden;
+  border: 0;
+  border-radius: 0;
+  padding: 0 16px;
+}
+
+.list-group-item .row-picture img,
+.list-group-item .row-action-primary img,
+.list-group-item .row-picture i,
+.list-group-item .row-action-primary i,
+.list-group-item .row-picture label,
+.list-group-item .row-action-primary label {
+  display: block;
+  width: 56px;
+  height: 56px;
+}
+
+.list-group-item .row-picture,
+.list-group-item .row-action-primary {
+  float: left;
+  display: inline-block;
+  padding-right: 16px;
+}
+
+.list-group-item .row-picture img.circle,
+.list-group .list-group-item .row-action-primary img.circle {
+  border-radius: 100%;
+}
+
+.list-group-item .row-content {
+  display: inline-block;
+  width: calc(100% - 92px);
+  min-height: 66px;
+}
+
+.list-group-item .list-group-item-heading {
+  color: rgba(0, 0, 0, 0.77);
+  font-size: 20px;
+  line-height: 29px;
+}

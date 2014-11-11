@@ -8,7 +8,7 @@
   function cupper(){
     return {
       restrict    : 'E',
-      templateUrl : 'core/cups-cupper.html',
+      templateUrl : 'core/directives/cups-cupper.html',
       scope       : {
 
         cupper : '=identity'

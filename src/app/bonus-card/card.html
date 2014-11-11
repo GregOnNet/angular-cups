@@ -1,24 +1,33 @@
 <div class="container">
   <div clsas="row">
 
-    <div class="col-md-offset-3 col-md-5">
+    <div class="col-md-offset-3 col-md-1">
+      <h1>
+        <a
+          href="#/"
+          class="btn btn-default btn-fab
+                 btn-raised mdi-navigation-arrow-back"></a>
+      </h1>
+    </div>
+
+    <div class="col-md-5">
       <h1>{{ card.cupper.name }}'s cup card</h1>
 
       <div class="well">
 
         <div class="row">
           <div ng-repeat="n in card.cupper.drunkenCups | toCollection track by $index"
-               class="col-md-3">
+               class="col-md-3 col-sm-3 col-xs-3">
             <span class="icon-cup-full"></span>
           </div>
           <div ng-repeat="n in (10-card.cupper.drunkenCups) | toCollection track by $index"
-               class="col-md-3">
+               class="col-md-3 col-sm-3 col-xs-3">
             <span class="icon-cup-empty"></span>
           </div>
         </div>
 
         <hr>
-        
+
         <button
           ng-if="card.cupper.getsAFreeCup === false"
           ng-click="card.stamp()" class="btn btn-primary btn-material-brown btn-block">

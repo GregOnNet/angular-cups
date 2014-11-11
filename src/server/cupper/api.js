@@ -39,3 +39,19 @@ exports.post = function(req, res) {
   cuppers.push(cupper);
   res.status(201).send('Created');
 };
+
+exports.drinksACup = function(req, res) {
+
+  var foundCuppers = cuppers.filter(function(cupper) {
+    return cupper.matriculationNumber === req.body.matriculationNumber;
+  });
+
+  if (foundCuppers.length === 1) {
+    foundCuppers[0].drunkenCups++;
+    res.status(200).send(foundCuppers[0]);
+  }
+  else
+    res
+      .status(404)
+      .send('There is no cupper matching the given matriculation number.');
+}

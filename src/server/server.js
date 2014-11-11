@@ -20,6 +20,7 @@ router.get('/cuppers', cupper.get);
 router.get('/cupper/:matriculationNumber', cupper.getByMatriculationNumber);
 
 router.post('/cupper', cupper.post);
+router.put('/cupper/drinksACup', cupper.drinksACup);
 
 app.use('/api', router);
 

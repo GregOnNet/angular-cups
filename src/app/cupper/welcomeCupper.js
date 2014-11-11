@@ -16,12 +16,12 @@
 
     function newCupper() {
 
-        cupper
-          .create(welcome.cupper)
-          .then(function() {
+      return cupper
+        .create(welcome.cupper)
+        .then(function() {
 
-            welcome.cupper = {};
-            $scope.form.$setPristine();
+          welcome.cupper = {};
+          $scope.form.$setPristine();
         });
     }
   }

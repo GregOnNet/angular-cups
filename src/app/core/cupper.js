@@ -11,9 +11,10 @@
     var api = '/api/';
 
     return {
-      getBy  : getBy,
-      getAll : getAll,
-      create : create
+      getBy      : getBy,
+      getAll     : getAll,
+      create     : create,
+      drinksACup : drinksACup
     };
 
     function getBy(matriculationNumber){
@@ -61,6 +62,24 @@
       function callSucceeded(response) {
 
         snackbar({ 'content' : response.data });
+        return response.data;
+      }
+
+      function callCrashed(error) {
+
+        snackbar({ 'content' : error.data });
+      }
+    }
+
+    function drinksACup(cupper) {
+
+      return $http
+        .put(api + 'cupper/drinksACup', cupper)
+        .then(callSucceeded)
+        .catch(callCrashed);
+
+      function callSucceeded(response) {
+
         return response.data;
       }
 

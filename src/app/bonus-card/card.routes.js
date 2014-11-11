@@ -9,9 +9,9 @@
 
   function defineRoutes($routeProvider) {
     $routeProvider
-      .when('/card/:id', {
+      .when('/card/:matriculationNumber', {
         templateUrl: 'bonus-card/card.html',
-        controller: 'bonusCard',
+        controller: 'card',
         controllerAs: 'card'
       });
   }

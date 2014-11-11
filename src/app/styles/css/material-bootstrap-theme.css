@@ -2,12 +2,6 @@
   margin-left: 88px;
 }
 
-.btn-fixed-right-bottom {
-  position: fixed;
-  right: 25px;
-  bottom: 25px;
-}
-
 .has-bottom-separator {
   border-bottom: 1px solid #E5E5E5;
   margin-bottom: 8px;
@@ -62,4 +56,25 @@
   color: rgba(0, 0, 0, 0.77);
   font-size: 20px;
   line-height: 29px;
+}
+
+.btn-add-cup {
+  position: absolute;
+  top: 42px;
+	left: calc(100% - 43px);
+	z-index: 999;
+}
+
+@media (max-width: 991px) {
+	.btn-add-cup {
+		position: fixed;
+		top: auto;
+		right: 20px;
+		bottom: 25px;
+		left: auto;
+		margin: 0;
+		width: 56px;
+		height: 56px;
+		z-index: 999;
+	}
 }

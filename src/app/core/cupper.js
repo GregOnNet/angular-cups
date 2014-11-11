@@ -11,10 +11,11 @@
     var api = '/api/';
 
     return {
-      getBy      : getBy,
-      getAll     : getAll,
-      create     : create,
-      drinksACup : drinksACup
+      getBy        : getBy,
+      getAll       : getAll,
+      create       : create,
+      drinksACup   : drinksACup,
+      getsAFreeCup : getsAFreeCup
     };
 
     function getBy(matriculationNumber){

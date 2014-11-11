@@ -17,6 +17,7 @@ app.use(bodyParser.urlencoded({'extended':'true'}));
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
 router.get('/cuppers', cupper.get);
+router.get('/cupper/:matriculationNumber', cupper.getByMatriculationNumber);
 
 router.post('/cupper', cupper.post);
 

@@ -47,7 +47,12 @@ exports.drinksACup = function(req, res) {
   });
 
   if (foundCuppers.length === 1) {
+
     foundCuppers[0].drunkenCups++;
+
+    if (foundCuppers[0].drunkenCups === 10)
+      foundCuppers[0].getsAFreeCup = true;
+
     res.status(200).send(foundCuppers[0]);
   }
   else

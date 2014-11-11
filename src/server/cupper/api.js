@@ -60,3 +60,22 @@ exports.drinksACup = function(req, res) {
       .status(404)
       .send('There is no cupper matching the given matriculation number.');
 }
+
+exports.getsAFreeCup = function(req, res) {
+
+  var foundCuppers = cuppers.filter(function(cupper) {
+    return cupper.matriculationNumber === req.body.matriculationNumber;
+  });
+
+  if (foundCuppers.length === 1) {
+
+    foundCuppers[0].drunkenCups = 0;
+    foundCuppers[0].getsAFreeCup = false;
+
+    res.status(200).send(foundCuppers[0]);
+  }
+  else
+    res
+      .status(404)
+      .send('There is no cupper matching the given matriculation number.');
+}

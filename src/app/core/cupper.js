@@ -29,7 +29,7 @@
 
       function callCrashed(error){
 
-        snackbar({ 'content' : error });
+        snackbar({ 'content' : error.data });
       }
     }
 
@@ -47,7 +47,7 @@
 
       function callCrashed(error){
 
-        snackbar({ 'content' : error });
+        snackbar({ 'content' : error.data });
       }
     }
 
@@ -66,7 +66,7 @@
 
       function callCrashed(error) {
 
-        snackbar({ 'content' : error });
+        snackbar({ 'content' : error.data });
       }
     }
   }

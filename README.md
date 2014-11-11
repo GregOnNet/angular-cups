@@ -6,7 +6,7 @@ A demo app to get started with AngularJS. It allows users (aka cuppers) to colle
 
 Run the following commands from the angular-cups root directory to install all needed dependencies
 
-1. `cd src/server && node install`
+1. `cd src/server && npm install`
 2. `bower install`
 
 ## Start the demo

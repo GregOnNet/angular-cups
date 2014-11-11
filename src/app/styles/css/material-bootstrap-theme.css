@@ -65,6 +65,14 @@
 	z-index: 999;
 }
 
+.return {
+	position: absolute;
+	display: flex;
+  left: -86px;
+  top: 0px;
+	z-index: 999;
+}
+
 @media (max-width: 991px) {
 	.btn-add-cup {
 		position: fixed;
@@ -75,6 +83,19 @@
 		margin: 0;
 		width: 56px;
 		height: 56px;
+		z-index: 999;
+	}
+	.return {
+		position: fixed;
+		top: auto;
+		right: auto;
+		bottom: 25px;
+		left: 20px;
+		margin: 0;
+		border-radius: 50%;
+		width: 56px;
+		height: 56px;
+		background-color: #eeeeee;
 		z-index: 999;
 	}
 }

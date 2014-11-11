@@ -11,6 +11,6 @@ Run the following commands from the angular-cups root directory to install all n
 
 ## Start the demo
 
-Run `server.js` to start the web server @ http://localhost:8080.
+Run `server.js` to start the web server @ [http://localhost:8080]().
 
 1. `node src/server/server.js`

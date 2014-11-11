@@ -11,9 +11,27 @@
     var api = '/api/';
 
     return {
+      getBy  : getBy,
       getAll : getAll,
       create : create
     };
+
+    function getBy(matriculationNumber){
+      return $http
+        .get(api + 'cupper/' + matriculationNumber)
+        .then(callSucceeded)
+        .catch(callCrashed);
+
+      function callSucceeded(response){
+
+        return response.data;
+      }
+
+      function callCrashed(error){
+
+        snackbar({ 'content' : error });
+      }
+    }
 
     function getAll() {
 
@@ -23,7 +41,7 @@
         .catch(callCrashed);
 
       function callSucceeded(response){
-        
+
         return response.data;
       }
 

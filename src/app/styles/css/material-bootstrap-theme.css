@@ -73,6 +73,10 @@
 	z-index: 999;
 }
 
+.well > .row.cups > div {
+	text-align: center;
+} 
+
 @media (max-width: 991px) {
 	.btn-add-cup {
 		position: fixed;

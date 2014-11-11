@@ -3,7 +3,8 @@
 
   angular.module('cups', [
    'cups.dashboard',
-   'cups.cupper'
+   'cups.cupper',
+   'cups.bonusCard'
   ]);
 
 }());

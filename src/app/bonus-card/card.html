@@ -9,7 +9,13 @@
         <cups-cupper
           identity="card.cupper">
         </cups-cupper>
-        
+        {{ card.cupper.drunkenCups }}
+
+        <button
+          ng-click="card.stamp()" class="btn btn-primary btn-material-brown align-to-list-group-content">
+          Stamp
+        </button>
+
       </div>
     </div>
   </div>

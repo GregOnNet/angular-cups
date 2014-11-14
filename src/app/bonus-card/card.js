@@ -9,13 +9,13 @@
 
   function card($routeParams, cupper) {
 
-    var card = this;
+    var bcard = this;
     var matriculationNumber = $routeParams.matriculationNumber;
 
-    card.cupper = {};
-    card.getCupper = getCupper;
-    card.stamp = stamp;
-    card.spendAFreeCup = spendAFreeCup;
+    bcard.cupper = {};
+    bcard.getCupper = getCupper;
+    bcard.stamp = stamp;
+    bcard.spendAFreeCup = spendAFreeCup;
 
     getCupper();
 
@@ -25,28 +25,28 @@
         .getBy(matriculationNumber)
         .then(function(cupper){
 
-          card.cupper = cupper;
-          return card.cupper;
+          bcard.cupper = cupper;
+          return bcard.cupper;
         });
     }
 
     function stamp(){
       return cupper
-        .drinksACup(card.cupper)
+        .drinksACup(bcard.cupper)
         .then(function(cupper){
 
-          card.cupper = cupper;
-          return card.cupper;
+          bcard.cupper = cupper;
+          return bcard.cupper;
         });
     }
 
     function spendAFreeCup(){
       return cupper
-        .getsAFreeCup(card.cupper)
+        .getsAFreeCup(bcard.cupper)
         .then(function(cupper){
 
-          card.cupper = cupper;
-          return card.cupper;
+          bcard.cupper = cupper;
+          return cupper;
         });
     }
   }

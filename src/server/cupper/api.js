@@ -29,7 +29,7 @@ exports.getByMatriculationNumber = function(req, res) {
       .status(409)
       .send('There more than one cupper with the same matriculation number.');
 
-}
+};
 
 exports.post = function(req, res) {
 
@@ -59,7 +59,7 @@ exports.drinksACup = function(req, res) {
     res
       .status(404)
       .send('There is no cupper matching the given matriculation number.');
-}
+};
 
 exports.getsAFreeCup = function(req, res) {
 
@@ -78,4 +78,4 @@ exports.getsAFreeCup = function(req, res) {
     res
       .status(404)
       .send('There is no cupper matching the given matriculation number.');
-}
+};

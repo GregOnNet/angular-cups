@@ -7,6 +7,7 @@
     "module"      : true,
     "exports"     : true,
     "__dirname"   : true,
-    "console"     : true
+    "console"     : true,
+    "inject"      : true,
   }
 }

@@ -3,6 +3,7 @@
 
   angular
    .module('cups', [
-     'cups.cupper'
+     'cups.cupper',
+     'cups.dashboard'
    ]);
 }());

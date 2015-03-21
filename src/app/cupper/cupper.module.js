@@ -3,6 +3,7 @@
 
   angular
     .module('cups.cupper', [
-      'ngRoute'
+      'ngRoute',
+      'ngMessages'
     ]);
 }());

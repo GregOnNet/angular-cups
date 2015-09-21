@@ -17,8 +17,9 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       // Angular
-      'src/app/bower_components/angular/angular.js',
-      'src/app/bower_components/angular-mocks/angular-mocks.js',
+      'bower_components/jQuery/dist/jquery.js',
+      'bower_components/angular/angular.js',
+      'bower_components/angular-mocks/angular-mocks.js',
 
       // App
       'src/app/**/*.module.js',
@@ -30,9 +31,7 @@ module.exports = function(config) {
 
 
     // list of files to exclude
-    exclude: [
-
-    ],
+    exclude: [ ],
 
 
     // preprocess matching files before serving them to the browser

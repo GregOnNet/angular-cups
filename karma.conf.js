@@ -1,3 +1,4 @@
+'use strict';
 // Karma configuration
 // Generated on Mon Sep 21 2015 19:40:38 GMT+0200 (CEST)
 
@@ -21,7 +22,7 @@ module.exports = function(config) {
 
       // App
       'src/app/**/*.module.js',
-      'src/app/**/*.js'
+      'src/app/**/*.js',
 
       // Tests
       'test/**/*.specs.js'

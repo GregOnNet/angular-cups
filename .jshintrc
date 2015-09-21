@@ -3,14 +3,17 @@
   "validthis"    : true,
 
   "globals" : {
-    "require"   : true,
-    "define"    : true,
-    "it"        : true,
-    "inject"    : true,
-    "module"    : true,
-    "exports"   : true,
-    "__dirname" : true,
-    "console"   : true,
-    "inject"    : true
+    "require"    : true,
+    "describe"   : true,
+    "expect"     : true,
+    "it"         : true,
+    "beforeEach" : true,
+    "afterEach"  : true,
+    "inject"     : true,
+    "module"     : true,
+    "exports"    : true,
+    "__dirname"  : true,
+    "console"    : true,
+    "inject"     : true
   }
 }

@@ -10,6 +10,7 @@ var router = express.Router();
 
 var cupper = require('./cupper/api');
 
+app.use('/bower_components',  express.static(path.join(__dirname , '..', '..' , 'bower_components')));
 app.use(express.static(path.join(__dirname , '..' , 'app')));
 app.use(bodyParser.json());
 app.use(methodOverride());

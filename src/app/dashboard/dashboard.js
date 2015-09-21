@@ -8,17 +8,17 @@
   dashboard.$inject = ['cupper'];
 
   function dashboard(cupper){
-    var dashboard = this;
+    var vm = this;
 
-    dashboard.cuppers = [];
-    dashboard.getAll = getAll;
+    vm.cuppers = [];
+    vm.getAll = getAll;
 
     getAll();
 
     function getAll(){
       return cupper.getAll().then(function(cuppers){
-        dashboard.cuppers = cuppers;
-        return dashboard.cuppers;
+        vm.cuppers = cuppers;
+        return vm.cuppers;
       });
     }
   }

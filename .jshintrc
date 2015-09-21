@@ -8,6 +8,6 @@
     "exports"     : true,
     "__dirname"   : true,
     "console"     : true,
-    "inject"      : true,
+    "inject"      : true
   }
 }

@@ -5,14 +5,17 @@
     .module('cups.cupper')
     .config(defineRoutes);
 
-  defineRoutes.$inject = ['$routeProvider'];
+  defineRoutes.$inject = ['$stateProvider', '$urlRouterProvider'];
 
-  function defineRoutes($routeProvider) {
-    $routeProvider
-      .when('/welcome-a-new-cupper', {
+  function defineRoutes($stateProvider, $urlRouterProvider) {
+    $stateProvider
+      .state('welcome', {
+        url: '/welcome',
         templateUrl: 'cupper/welcomeCupper.html',
-        controller: 'welcomeCupper',
-        controllerAs: 'welcome'
+        controller: 'welcomeCupper as welcome'
       });
+
+    $urlRouterProvider
+      .when('/cupper/create', '/welcome');
   }
 }());

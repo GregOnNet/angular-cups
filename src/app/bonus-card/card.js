@@ -5,12 +5,12 @@
     .module('cups.bonusCard')
     .controller('card', card);
 
-  card.$inject = ['$routeParams', 'cupper'];
+  card.$inject = ['$stateParams', 'cupper'];
 
-  function card($routeParams, cupper) {
+  function card($stateParams, cupper) {
 
     var bcard = this;
-    var matriculationNumber = $routeParams.matriculationNumber;
+    var matriculationNumber = $stateParams.matriculationNumber;
 
     bcard.cupper = {};
     bcard.getCupper = getCupper;

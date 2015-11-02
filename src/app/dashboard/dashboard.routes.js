@@ -5,14 +5,14 @@
     .module('cups.dashboard')
     .config(defineRoutes);
 
-  defineRoutes.$inject = ['$routeProvider'];
+  defineRoutes.$inject = ['$stateProvider'];
 
-  function defineRoutes($routeProvider) {
-    $routeProvider
-      .when('/', {
+  function defineRoutes($stateProvider) {
+    $stateProvider
+      .state('dashboard', {
+        url: '/',
         templateUrl: 'dashboard/dashboard.html',
-        controller: 'dashboard',
-        controllerAs: 'dashboard'
+        controller: 'dashboard as dashboard'
       });
   }
 }());

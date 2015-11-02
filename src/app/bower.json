@@ -23,7 +23,7 @@
   ],
   "dependencies": {
     "angular": "1.x",
-    "angular-route": "1.x",
+    "ui-router": "0.2.x",
     "angular-messages": "1.x",
     "bootstrap": "~3.3.0",
     "bootstrap-material-design": "~0.1.5",

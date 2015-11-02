@@ -5,14 +5,14 @@
     .module('cups.bonusCard')
     .config(defineRoutes);
 
-  defineRoutes.$inject = ['$routeProvider'];
+  defineRoutes.$inject = ['$stateProvider'];
 
-  function defineRoutes($routeProvider) {
-    $routeProvider
-      .when('/card/:matriculationNumber', {
+  function defineRoutes($stateProvider) {
+    $stateProvider
+      .state('bonus-card', {
+        url: '/card/:matriculationNumber',
         templateUrl: 'bonus-card/card.html',
-        controller: 'card',
-        controllerAs: 'card'
+        controller: 'card as card'
       });
   }
 }());

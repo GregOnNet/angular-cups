@@ -21,13 +21,13 @@ exports.getByMatriculationNumber = function(req, res) {
 
   else if (foundCuppers.length === 0)
     res
-      .status(404)
-      .send('There is no cupper matching the given matriculation number.');
+    .status(404)
+    .send('There is no cupper matching the given matriculation number.');
 
   else
     res
-      .status(409)
-      .send('There more than one cupper with the same matriculation number.');
+    .status(409)
+    .send('There more than one cupper with the same matriculation number.');
 
 };
 
@@ -38,6 +38,24 @@ exports.post = function(req, res) {
 
   cuppers.push(cupper);
   res.status(201).send('Created');
+};
+
+exports.delete = function(req, res) {
+  var foundCuppers = cuppers.filter(function(cupper) {
+    return cupper.matriculationNumber === req.params.matriculationNumber;
+  });
+
+  if (foundCuppers.length === 1) {
+    for (var i = cuppers.length-1; i >= 0; i--)
+      if (cuppers[i].value === 5)
+          cuppers.splice(i, 1);
+
+    res.status(200)
+       .send('Cupper was deleted successfully.');
+  } else if (foundCuppers.length === 0)
+    res
+    .status(404)
+    .send('There is no cupper matching the given matriculation number.');
 };
 
 exports.drinksACup = function(req, res) {
@@ -54,11 +72,10 @@ exports.drinksACup = function(req, res) {
       foundCuppers[0].getsAFreeCup = true;
 
     res.status(200).send(foundCuppers[0]);
-  }
-  else
+  } else
     res
-      .status(404)
-      .send('There is no cupper matching the given matriculation number.');
+    .status(404)
+    .send('There is no cupper matching the given matriculation number.');
 };
 
 exports.getsAFreeCup = function(req, res) {
@@ -73,9 +90,8 @@ exports.getsAFreeCup = function(req, res) {
     foundCuppers[0].getsAFreeCup = false;
 
     res.status(200).send(foundCuppers[0]);
-  }
-  else
+  } else
     res
-      .status(404)
-      .send('There is no cupper matching the given matriculation number.');
+    .status(404)
+    .send('There is no cupper matching the given matriculation number.');
 };

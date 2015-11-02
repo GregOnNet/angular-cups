@@ -12,7 +12,16 @@
       .state('dashboard', {
         url: '/',
         templateUrl: 'dashboard/dashboard.html',
-        controller: 'dashboard as dashboard'
+        controller: 'dashboard as dashboard',
+        resolve: {
+          cuppersPreparation : c
+        }
       });
+  }
+
+  c.$inject = ['cupper'];
+
+  function c(cupper) {
+    return cupper.getAll();
   }
 }());

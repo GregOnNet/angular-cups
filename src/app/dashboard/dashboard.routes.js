@@ -14,14 +14,13 @@
         templateUrl: 'dashboard/dashboard.html',
         controller: 'dashboard as dashboard',
         resolve: {
-          cuppersPreparation : c
+          cuppersPreparation : cuppersPreparation
         }
       });
   }
 
-  c.$inject = ['cupper'];
-
-  function c(cupper) {
+  cuppersPreparation.$inject = ['cupper'];
+  function cuppersPreparation(cupper) {
     return cupper.getAll();
   }
 }());

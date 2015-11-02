@@ -14,6 +14,7 @@
       getBy        : getBy,
       getAll       : getAll,
       create       : create,
+      delete       : delete,
       drinksACup   : drinksACup,
       getsAFreeCup : getsAFreeCup
     };
@@ -30,6 +31,23 @@
       }
 
       function callCrashed(error){
+
+        snackbar({ 'content' : error.data });
+      }
+    }
+
+    function delete(matriculationNumber){
+      return $http
+        .delete(api + 'cupper/' + matriculationNumber)
+        .then(deletionSucceeded)
+        .catch(deletionFailed);
+
+      function deletionSucceeded(response){
+
+        return response.data;
+      }
+
+      function deletionFailed(error){
 
         snackbar({ 'content' : error.data });
       }

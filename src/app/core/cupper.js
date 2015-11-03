@@ -14,7 +14,7 @@
       getBy        : getBy,
       getAll       : getAll,
       create       : create,
-      delete       : delete,
+      remove       : remove,
       drinksACup   : drinksACup,
       getsAFreeCup : getsAFreeCup
     };
@@ -36,7 +36,7 @@
       }
     }
 
-    function delete(matriculationNumber){
+    function remove(matriculationNumber){
       return $http
         .delete(api + 'cupper/' + matriculationNumber)
         .then(deletionSucceeded)

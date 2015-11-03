@@ -2,5 +2,6 @@
   'use strict';
 
   angular
-   .module('cups.cupper', ['cups.core']);
+    .module('cups.core', [ 'ui.router' ]);
+
 }());

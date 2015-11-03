@@ -44,7 +44,7 @@
 
       function deletionSucceeded(response){
 
-        return response.data;
+        snackbar({ 'content' : response.data });
       }
 
       function deletionFailed(error){

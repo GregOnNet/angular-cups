@@ -11,6 +11,7 @@
     var api = '/api/cupper/';
 
     this.create = create;
+    this.remove = remove;
     this.getAll = getAll;
     this.get    = get;
 
@@ -29,8 +30,16 @@
 
     function get(matriculationNumber) {
       return $http.get(api + matriculationNumber)
+         .then(returnResponse)
+         .catch(function(error) {
+           snackbar({content: error.data});
+         });
+    }
+
+    function remove(matriculationNumber) {
+      return $http.delete(api + matriculationNumber)
          .then(function(response) {
-           return response.data;
+           snackbar({content: response.data});
          })
          .catch(function(error) {
            snackbar({content: error.data});
@@ -39,9 +48,7 @@
 
     function getAll() {
       return $http.get('/api/cuppers')
-       .then(function(response) {
-         return response.data;
-       })
+       .then(returnResponse)
        .catch(function(error) {
          snackbar({content: error.data});
        });
@@ -49,9 +56,7 @@
 
     function drinksACup(cupper) {
       return $http.put(api + 'drinksACup', cupper)
-        .then(function(response) {
-          return response.data;
-        })
+        .then(returnResponse)
         .catch(function(error) {
           snackbar({content: error.data});
         });
@@ -59,12 +64,14 @@
 
     function spendAFreeCup(cupper) {
       return $http.put(api + 'getsAFreeCup', cupper)
-        .then(function(response) {
-          return response.data;
-        })
+        .then(returnResponse)
         .catch(function(error) {
           snackbar({content: error.data});
         });
+    }
+
+    function returnResponse(response) {
+      return response.data;
     }
   }
 }());

@@ -17,7 +17,8 @@
     };
   }
 
-  function controller() {
+  controller.$inject = ['cupsApi'];
+  function controller(cupsApi) {
     var vm = this;
 
     vm.checkAll = checkAll;
@@ -32,7 +33,11 @@
     function removeSelected() {
       angular.forEach(vm.cuppers, function(cp) {
         if(cp.isChecked)
-          console.info('Call http to remove cupper....');
+          cupsApi.remove(cp.matriculationNumber);
+      });
+
+      cupsApi.getAll().then(function(cuppers){
+        vm.cuppers = cuppers;
       });
     }
   }

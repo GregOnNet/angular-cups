@@ -1,5 +1,5 @@
 <!Doctype html>
-<html>
+<html ng-app="cups.cupper">
 
 <head>
   <title>Cups</title>
@@ -15,12 +15,12 @@
 <body>
 
   <section id="content">
-    <div ng-view></div>
+    <div ui-view></div>
   </section>
 
   <!-- AngularJS Modules -->
   <script src="bower_components/angular/angular.js"></script>
-  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/ui-router/release/angular-ui-router.js"></script>
   <script src="bower_components/angular-messages/angular-messages.js"></script>
 
   <!-- Vendor Scripts -->
@@ -33,6 +33,11 @@
         $.material.init();
     });
   </script>
+
+  <!-- Cupper -->
+  <script src="./cupper/cups.cupper.module.js" charset="utf-8"></script>
+  <script src="./cupper/cups.cupper.routes.js" charset="utf-8"></script>
+  <script src="./cupper/cups.cupper.controller.js" charset="utf-8"></script>
 
 </body>
 </html>

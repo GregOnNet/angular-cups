@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <input ng-click="commander.checkAll(checked)"
+             ng-model="checked" type="checkbox">
+      <button
+        ng-click="commander.removeSelected()"
+        class="btn btn-danger">
+        <span class="glyphicon glyphicon-remove"></span>
+      </button>
+
+      <hr>
+
+      <div class="panel" ng-repeat="cupper in commander.cuppers">
+        <input ng-model="cupper.isChecked"
+               type="checkbox">
+        {{ cupper.name }}
+      </div>
+    </div>
+  </div>
+</div>

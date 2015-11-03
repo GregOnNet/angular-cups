@@ -5,6 +5,7 @@
     .module('cups', [
       'cups.dashboard',
       'cups.cupper',
-      'cups.card'
+      'cups.card',
+      'cups.admin'
     ]);
 }());

@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<!-- <div class="container-fluid"> -->
   <div class="row">
 
     <div class="col-md-offset-4 col-md-4">
@@ -24,9 +24,12 @@
 
 
                 <div class="form-group">
-                  <input ng-model="cupper.identity.name" name="name" class="form-control floating-label" placeholder="Name" required>
+                  <input ng-model="cupper.identity.name" name="name"
+                         class="form-control floating-label" placeholder="Name"
+                         required>
                 </div>
-                <div ng-messages="form.name.$error" ng-if="form.name.$dirty" class="error-messages">
+                <div ng-messages="form.name.$error" ng-if="form.name.$dirty"
+                      class="error-messages">
                   <div ng-message="required">
                     You forgot to enter a name...
                   </div>
@@ -41,7 +44,8 @@
                          minlength="7"
                          maxlength="7">
                 </div>
-                <div ng-messages="form.matriculationNumber.$error" ng-if="form.matriculationNumber.$dirty" class="error-messages">
+                <div ng-messages="form.matriculationNumber.$error"
+                     ng-if="form.matriculationNumber.$dirty" class="error-messages">
                   <div ng-message="required">
                     You forgot to enter a matriculation number...
                   </div>

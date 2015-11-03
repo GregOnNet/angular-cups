@@ -2,6 +2,9 @@
   'use strict';
 
   angular
-    .module('cups.core', [ 'ui.router' ]);
+    .module('cups.core', [
+      'ui.router',
+      'ngMessages'
+    ]);
 
 }());

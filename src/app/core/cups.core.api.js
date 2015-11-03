@@ -11,6 +11,7 @@
     var api = '/api/cupper/';
 
     this.create = create;
+    this.getAll = getAll;
 
     function create(cupper) {
       $http.post(api, cupper)
@@ -20,6 +21,16 @@
            .catch(function(error) {
              snackbar({content: error.data});
            });
+    }
+
+    function getAll() {
+      return $http.get('/api/cuppers')
+       .then(function(response) {
+         return response.data;
+       })
+       .catch(function(error) {
+         snackbar({content: error.data});
+       });
     }
   }
 }());

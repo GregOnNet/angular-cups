@@ -21,6 +21,8 @@
   function controller(cupsApi) {
     var vm = this;
 
+    vm.getAll = getAll;
+
     vm.checkAll = checkAll;
     vm.removeSelected = removeSelected;
 
@@ -30,15 +32,20 @@
       });
     }
 
+    function getAll() {
+      cupsApi.getAll()
+        .then(function(cuppers){
+          vm.cuppers = cuppers;
+        });
+    }
+
     function removeSelected() {
       angular.forEach(vm.cuppers, function(cp) {
         if(cp.isChecked)
           cupsApi.remove(cp.matriculationNumber);
       });
 
-      cupsApi.getAll().then(function(cuppers){
-        vm.cuppers = cuppers;
-      });
+      vm.getAll();
     }
   }
 }());

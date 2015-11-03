@@ -46,9 +46,9 @@ exports.delete = function(req, res) {
   });
 
   if (foundCuppers.length === 1) {
-    for (var i = cuppers.length-1; i >= 0; i--)
-      if (cuppers[i].value === 5)
-          cuppers.splice(i, 1);
+    cuppers = cuppers.filter(function(cupper) {
+      return cupper.matriculationNumber !== req.params.matriculationNumber;
+    });
 
     res.status(200)
        .send('Cupper was deleted successfully.');

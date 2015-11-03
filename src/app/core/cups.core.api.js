@@ -14,13 +14,13 @@
     this.getAll = getAll;
 
     function create(cupper) {
-      $http.post(api, cupper)
-           .then(function(response) {
-             snackbar({content: response.data});
-           })
-           .catch(function(error) {
-             snackbar({content: error.data});
-           });
+      return $http.post(api, cupper)
+         .then(function(response) {
+           snackbar({content: response.data});
+         })
+         .catch(function(error) {
+           snackbar({content: error.data});
+         });
     }
 
     function getAll() {

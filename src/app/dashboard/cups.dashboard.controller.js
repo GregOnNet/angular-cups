@@ -15,12 +15,11 @@
     getAll();
 
     function getAll() {
-      cupsApi.getAll()
-             .then(function(cuppers){
-               console.log(cuppers);
-               vm.cuppers = cuppers;
-             });
+      cupsApi
+         .getAll()
+         .then(function(cuppers){
+           vm.cuppers = cuppers;
+         });
     }
-
   }
 }());

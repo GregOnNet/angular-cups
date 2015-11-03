@@ -34,10 +34,20 @@ exports.getByMatriculationNumber = function(req, res) {
 exports.post = function(req, res) {
 
   var data = req.body || {};
-  var cupper = new Cupper(data.name, data.matriculationNumber);
 
-  cuppers.push(cupper);
-  res.status(201).send('Created');
+  var foundCuppers = cuppers.filter(function(cupper) {
+    return cupper.matriculationNumber === data.matriculationNumber;
+  });
+
+  if (foundCuppers.length > 0)
+    res.status(409)
+       .send('A cupper with the same matriculation number already exists');
+  else {
+    var cupper = new Cupper(data.name, data.matriculationNumber);
+
+    cuppers.push(cupper);
+    res.status(201).send('Created');
+  }
 };
 
 exports.delete = function(req, res) {

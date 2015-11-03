@@ -23,6 +23,7 @@ router.get('/cupper/:matriculationNumber', cupper.getByMatriculationNumber);
 router.post('/cupper', cupper.post);
 router.put('/cupper/drinksACup', cupper.drinksACup);
 router.put('/cupper/getsAFreeCup', cupper.getsAFreeCup);
+router.delete('/cupper/:matriculationNumber', cupper.delete);
 
 app.use('/api', router);
 

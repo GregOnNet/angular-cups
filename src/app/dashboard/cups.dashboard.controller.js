@@ -5,21 +5,20 @@
    .module('cups.dashboard')
    .controller('dashboardController', DashboardController);
 
-  DashboardController.$inject = ['cupsApi'];
-  function DashboardController(cupsApi) {
+  DashboardController.$inject = ['cuppersPreparation'];
+  function DashboardController(cuppersPreparation) {
     var vm = this;
 
-    vm.cuppers = [];
-    vm.getAll = getAll;
+    vm.cuppers = cuppersPreparation;
 
-    getAll();
-
-    function getAll() {
-      cupsApi
-         .getAll()
-         .then(function(cuppers){
-           vm.cuppers = cuppers;
-         });
-    }
+    // getAll();
+    //
+    // function getAll() {
+    //   cupsApi
+    //      .getAll()
+    //      .then(function(cuppers){
+    //        vm.cuppers = cuppers;
+    //      });
+    // }
   }
 }());

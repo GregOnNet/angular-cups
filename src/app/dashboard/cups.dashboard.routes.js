@@ -12,7 +12,15 @@
       .state('dashboard', {
         url: '/',
         templateUrl: 'dashboard/dashboard.html',
-        controller: 'dashboardController as dashboard'
+        controller: 'dashboardController as dashboard',
+        resolve: {
+          cuppersPreparation : cuppersPreparation
+        }
       });
+  }
+
+  cuppersPreparation.$inject = ['cupsApi'];
+  function cuppersPreparation(cupsApi) {
+    return cupsApi.getAll();
   }
 }());

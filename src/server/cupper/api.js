@@ -10,6 +10,24 @@ exports.get = function(req, res) {
 
 };
 
+exports.delete = function(req, res) {
+  var foundCuppers = cuppers.filter(function(cupper) {
+    return cupper.matriculationNumber === req.params.matriculationNumber;
+  });
+
+  if (foundCuppers.length === 1) {
+    cuppers = cuppers.filter(function(cupper) {
+      return cupper.matriculationNumber !== req.params.matriculationNumber;
+    });
+
+    res.status(200)
+       .send('Cupper was deleted successfully.');
+  } else if (foundCuppers.length === 0)
+    res
+    .status(404)
+    .send('There is no cupper matching the given matriculation number.');
+};
+
 exports.getByMatriculationNumber = function(req, res) {
 
   var foundCuppers = cuppers.filter(function(cupper) {

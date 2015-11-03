@@ -21,7 +21,7 @@
 
     function spendAFreeCup() {
       cupsApi
-        .spendAFreeCup()
+        .spendAFreeCup(vm.cupper)
         .then(updateCupper);
     }
 

@@ -2,7 +2,11 @@
   <div class="row">
 
     <div class="col-md-offset-4 col-md-4">
-      <h1>Cups</h1>
+      <h1>Cups
+        <small ng-if="filterResult.length > 0">
+          ({{ filterResult.length }})
+        </small>
+      </h1>
 
       <div class="well">
 
@@ -15,7 +19,8 @@
         <div class="list-group">
 
           <cups-cupper
-            ng-repeat="cupper in dashboard.cuppers | filter:cuppersQuery"
+            ng-repeat="cupper in dashboard.cuppers
+                       | filter:cuppersQuery as filterResult"
             identity="cupper">
           </cups-cupper>
 

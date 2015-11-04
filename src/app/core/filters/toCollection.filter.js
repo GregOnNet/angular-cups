@@ -8,8 +8,7 @@
   function toCollection() {
 
     return function (input) {
-
-      if (input && !isNaN(input))
+      if (input && !isNaN(input) && input > 0)
         return new Array(input);
 
       return input;

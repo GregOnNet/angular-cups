@@ -1,5 +1,4 @@
 {
-  "globalstrict"  : true,
   "validthis"     : true,
 
   "globals" : {

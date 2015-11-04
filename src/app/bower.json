@@ -29,6 +29,7 @@
     "jQuery": "~2.1.1",
     "snackbarjs": "~1.0.0",
     "angular-messages": "~1.3.2",
-    "ui-router": "~0.2.15"
+    "ui-router": "~0.2.15",
+    "angular-mocks": "~1.4.7"
   }
 }

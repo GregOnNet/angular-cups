@@ -7,7 +7,8 @@ describe('Serving the dashboard', function() {
   it('should have a heading "Cups"', function() {
 
     var heading = element(by.css('h1'));
-    expect(heading.getText()).toBe('Cups');
+    // expect(heading.getText()).toContain('Cups ');
+    expect(heading.getText()).toMatch(/Cups\s\(\d\)/);
 
   });
 
@@ -25,6 +26,22 @@ describe('Serving the dashboard', function() {
       element(by.css('a#lnk-to-welcome')).click();
                                               // #/welcome
       expect(browser.getCurrentUrl()).toMatch(/#\/welcome/);
+    });
+  });
+
+  describe('When searching a cupper', function() {
+
+    it('should update the value of the heading', function() {
+
+      element(by.css('h1')).getText()
+        //              Cups (4)
+        .then(function(originalValue){
+
+          element(by.model('cuppersQuery')).sendKeys('G');
+          var newValue = element(by.css('h1')).getText();
+          //     Cups (1)
+          expect(newValue).not.toBe(originalValue);
+        });
     });
   });
 

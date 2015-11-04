@@ -22,12 +22,11 @@ describe('Serving the dashboard', function() {
 
     it('should navigate to /welcome', function() {
 
-      element(by.css('a')).click();
+      element(by.css('a#lnk-to-welcome')).click();
                                               // #/welcome
       expect(browser.getCurrentUrl()).toMatch(/#\/welcome/);
     });
   });
-
 
   // Übung
   // Eingabefeld des filters mit by.model()-Selektor suchen

@@ -11,6 +11,12 @@
     "describe"    : true,
     "xdescribe"   : true,
     "it"          : true,
-    "xit"         : true
+    "xit"         : true,
+
+    "beforeEach"  : true,
+    "module"      : true,
+    "inject"      : true,
+
+    "browser"     : true
   }
 }

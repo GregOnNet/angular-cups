@@ -60,6 +60,7 @@
 
     function showResponseMessage(response) {
       snackbar({content: response.data});
+      return response.data;
     }
   }
 }());

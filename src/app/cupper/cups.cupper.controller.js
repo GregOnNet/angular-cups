@@ -14,7 +14,10 @@
     vm.create = create;
 
     function create() {
-      cupsApi.create(vm.identity);
+      cupsApi.create(vm.identity)
+             .then(function(cupper) {
+               vm.identity = cupper;
+             });
     }
   }
 }());

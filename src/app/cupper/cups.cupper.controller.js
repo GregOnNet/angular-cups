@@ -5,9 +5,9 @@
      .module('cups.cupper')
      .controller('cupperController', CupperController);
 
-  CupperController.$inject = ['cupsApi'];
+  CupperController.$inject = ['$scope', 'cupsApi'];
 
-  function CupperController(cupsApi) {
+  function CupperController($scope, cupsApi) {
     var vm = this;
 
     vm.identity = {};
@@ -17,6 +17,7 @@
       cupsApi.create(vm.identity)
              .then(function(cupper) {
                vm.identity = cupper;
+               $scope.$emit('Created', 'Cupper was created successfully!');
              });
     }
   }
